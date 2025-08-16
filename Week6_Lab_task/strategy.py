@@ -21,3 +21,10 @@ class RightAngleStrategy(TurnStrategy):
 
 class StepStrategy(ABC):
     def step(self) -> int: ...
+    
+class FixedStepStrategy(StepStrategy):
+    def __init__(self, length: int=10):
+        self._len = length
+        
+    def step(self) -> int:
+        return self._len

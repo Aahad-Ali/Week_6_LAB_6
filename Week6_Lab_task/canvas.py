@@ -4,8 +4,10 @@ from point import Point
 
 
 class Canvas:
-    def __init__(self, width: int, height: int):
-        self.lines: List[Line] = []
+    def __init__(self, width: int=500, height: int=500) -> None:
+        self.width = width
+        self.height = height
+        self._lines: List[Line] = []   #private attribute
         
         
     def add_line(self, start: Point, end: Point):

@@ -8,8 +8,8 @@ class Turtle:
     def __init__(self,pen:Pen,direction_deg:float =0.0, turn_strategy:TurnStrategy |None =None, step_strategy:StepStrategy |None =None):
         self._pen = pen
         self._dir = direction_deg
-        self._turn = turn_strategy or RightAngleStrategy(90.0)
-        self._step = step_strategy or FixedStepStrategy(10)
+        self._turn = turn_strategy or RightAngleStrategy(90)
+        self._step = step_strategy or FixedStepStrategy(50)
         
     @property
     def direction(self) -> float:

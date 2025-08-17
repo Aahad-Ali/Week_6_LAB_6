@@ -4,7 +4,7 @@ from canvas import Canvas
 class Pen:
     def __init__(self, canvas: Canvas, start: Point | None = None) -> None:
         self.canvas = canvas
-        self.current_position =start or Point(0, 0)
+        self.current_position =start or Point(250, 250)
 
     @property
     def position(self) -> Point:
@@ -17,5 +17,5 @@ class Pen:
     
     def line_to(self, p: Point):
         """Draw a line from the current position to a new position."""
-        self._canvas.add_line(self.current_position, p)
+        self.canvas.add_line(self.current_position, p)
         self.current_position =p

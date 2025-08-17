@@ -10,14 +10,14 @@ class TurnStrategy(ABC):
     
     
 class RightAngleStrategy(TurnStrategy):
-    def __init__(self,angle:float = 90.0):
+    def __init__(self,angle:float = 90):
         self.a = angle
         
     def left_angle(self) -> float:
-        return self._a
+        return self.a
     
     def right_angle(self) -> float:
-        return self._a
+        return self.a
 
 class StepStrategy(ABC):
     def step(self) -> int: ...

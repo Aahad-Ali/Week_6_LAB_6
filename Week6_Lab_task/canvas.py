@@ -24,3 +24,7 @@ class Canvas:
         """Print the lines in the canvas for debugging purposes."""
         for i, ln in enumerate(self._lines,1):
             print(f"{i:02d}. {ln.start} -> {ln.end}")
+    
+    def clear(self):
+        self._lines.clear()
+        

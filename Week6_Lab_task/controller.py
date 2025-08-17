@@ -24,6 +24,7 @@ class Controller:
     def execute_commands_animated(self, program: str, gui, delay=500):
         """Step by step execution with animation in GUI"""
         commands = self.parser.parse(program)
+        self.canvas.clear()  # Clear the canvas before starting
 
         def step(i=0):
             if i < len(commands):
